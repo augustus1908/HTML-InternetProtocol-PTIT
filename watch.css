@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial","Roboto",sans-serif;
+} 
+
+a{
+    display: block;
+    text-decoration: none;
+}
+/*====== Thanh menu======= */
+#header{
+    height: 46px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: relative;
+}
+
+#nav{
+    display: inline-block;
+    font-size: 15px;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 28px;
+    display: block;
+}
+
+#nav li:hover .subnav{
+    display: block;
+} 
+
+#nav >li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav{
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 0 12px;
+}
+
+#nav .subnav li:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+    cursor: pointer;
+}
+#header .search-btn:hover{
+    background-color: #ccc;
+}
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+/* ==============Mở đầu============= */
+.row1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.column1 {
+    margin-left: 180px; 
+    margin-top: 100px; 
+    padding: 10px;
+    height: 300px;
+}
+
+.text-watch {
+    width: 25%;
+    margin-top: 50px;
+}
+  
+.image-watch {
+    width: 55%;
+    margin-left: 140px;
+}
+.heading{
+    color: #000000;
+    text-align: left;
+    padding-top: 5.5rem;
+    font-size: 5.6rem;
+    line-height: 1.17143;
+    margin-top: 4rem;
+    letter-spacing: -.005rem;
+    font-weight: bolder;
+    font-family:'Noto Sans Display', sans-serif;
+}
+.sub-heading{
+    color:#BB0000;
+    text-align: left;
+    padding-top: 12px;
+    font-size: 22px;
+    letter-spacing: .008rem;
+    font-weight: 550;
+}
+
+.detail{
+    color: #777777;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 140%;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*================ Slideshow ===============*/
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    margin-top: 300px; 
+    margin-left: 220px;
+  }
+  /* Ẩn các slider */
+  .mySlides {
+      display: none;
+  }
+  
+  /* định dạng các chấm chuyển đổi các slide */
+  .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /* khi được hover, active đổi màu nền */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+   
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+   
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+/* ===============Các sản phẩm watch========== */
+.cau-hoi{
+    margin-top: 150px;
+    text-align: center;
+    font-size: xxx-large;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+.loi-dan{
+    text-align: center;
+    margin-top: 20px;
+    font-size: x-large;
+    color: #003399;
+}
+.row2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 100px;
+}
+.column2-1{
+    margin-top: 40px;
+    width: 350px; 
+    height: 400px;
+}
+.column2-2{
+    margin-top: 40px;
+    width: 350px; 
+    height: 400px;
+}
+.column2-3{
+    margin-top: 40px;
+    width: 350px; 
+    height: 400px;
+}
+.image-watch1{
+    width: 250px;
+    height: 320px;
+    /* margin-left: 300px; */
+}
+
+.tên-spham{
+    color: #222222;
+    font-size: 22px;
+    line-height: 1.86;
+    letter-spacing: -0.022em; 
+    font-weight: 650;
+    /* margin-left: 300px; */
+    width: 250px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+.giá-tiền{
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.4285914286;
+    font-weight: bold;
+    letter-spacing: -0.016em;
+    /* margin-left: 300px; */
+    margin-bottom: 25px;
+    width: 250px;
+}
+.thông-số{
+    font-size: 14px;
+    line-height: 3;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+    color: #777777;
+    /* margin-left: 300px; */
+    width: 250px;
+}
+/* ===================Footer================ */
+.cuoipage{
+    background-color: #dddddd;
+    padding: 64px 16px;
+    text-align: center;
+    margin-top: 400px;
+}
+.cuoipage .ten-btl{
+    font-weight: bold;
+    font-size: 15px;
+}
+.cuoipage .ten-nhom{
+    margin-top: 15px;
+    font-size: 15px;
+}
