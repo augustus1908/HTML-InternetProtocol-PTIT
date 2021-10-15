@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="stylesheet" href="watch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+</head>
+<body>
+    <header>
+        <div id="header">
+            <!---Begin Nav-->
+            <ul id="nav">
+                <li><a href="home.html">Trang chủ</a></li>
+                <li>
+                    <a href="home.html">Giới thiệu</a>
+                    <ul class="subnav">
+                        <li><a href="home.html">Thị Trường</a></li>
+                        <li><a href="home.html">Doanh Số</a></li>
+                    </ul>
+                </li>
+                <li><a href="iphone.html">iPhone</a></li>
+                <li><a href="watch.html">Watch</a></li>
+                <li><a href="TV.html">TV</a></li>
+                <li><a href="order.html">Đặt hàng</a></li>
+                <li><a href="contact.html">Hỗ trợ</a></li>
+            </ul>
+            <!---End Nav-->
+
+            <!---Begin Search-->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!---End Search-->
+
+        </div>
+    </header>
+
+    <!-- -------Mở đầu---------- -->
+    <section>
+        <div class="row1">
+            <div class="column1 text-watch">
+                <h3 class="heading">Apple Watch</h3>
+                <p class="sub-heading">Thế hệ thứ 7</p>
+                <h2>Thời trang - Đẳng cấp - Quý phái</h2>
+                <p class="detail">Chiếc Apple Watch sở hữu dây đeo sáng bóng, chống gỉ sét tốt, màn hình tràn viền mang lại sự trải nghiệm sắc nét, rõ ràng. Phần thân máy có kết cấu chắc chắn, kính cường lực chống trầy xước tốt, không ngại những va chạm thông thường. Mặt đồng hồ với kích thước 1.78 inch giúp hiển thị thông tin rõ ràng hơn, đem lại cho bạn sự hài lòng khi đeo mẫu đồng hồ phiên bản 2021 này trên tay.</p>
+            </div>
+            <div class="column1 image-watch">
+              <img src="ảnh-watch.PNG",height="351", width="637" >
+            </div>
+        </div>
+
+    </section>
+    <!------ Slideshow -------->
+    <section>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="slide1.PNG", style="width: 80%; height: 70%;">
+            </div>
+            <div class="mySlides fade">
+              <img src="slide3.PNG", style="width: 80%; height: 70%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="slide4.PNG", style="width: 80%; height: 70%;">
+            </div>
+          </div>
+          <br>
+           
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+          </div>
+        
+          <script>
+            //khai báo biến slideIndex đại diện cho slide hiện tại
+            var slideIndex;
+            // KHai bào hàm hiển thị slide
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+           
+                slides[slideIndex].style.display = "block";  
+                dots[slideIndex].className += " active";
+                //chuyển đến slide tiếp theo
+                slideIndex++;
+                //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+                if (slideIndex > slides.length - 1) {
+                  slideIndex = 0
+                }    
+                //tự động chuyển đổi slide sau 5s
+                setTimeout(showSlides, 5000);
+            }
+            //mặc định hiển thị slide đầu tiên 
+            showSlides(slideIndex = 0);
+           
+           
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+          </script> 
+
+    </section>
+
+    <!----------- Các sản phẩm watch -------->
+    <section class="spham-watch">
+        <div>
+            <h2 class="cau-hoi">Chiếc Watch nào là sự lựa chọn của bạn?</h2>
+            <p class="loi-dan">So sánh chi tiết</p>
+        </div>
+        <div class="row2">
+            <div class="column2-1">
+                <img src="watch-seri-6.PNG", class="image-watch1" >
+                <h3 class="tên-spham">Apple Watch Series 6</h3>
+                <h4 class="giá-tiền">Chỉ từ 14.990.000đ</h4>
+                <p class="thông-số">Vòng 44nm hoặc 40nm</p>
+                <p class="thông-số">Màn hình Retina luôn hiển thị</p>
+                <p class="thông-số">---</p>
+                <p class="thông-số">GPS + Di động</p>
+                <p class="thông-số">Đo nồng độ Oxy trong máu</p>
+                <p class="thông-số">Thông báo nhịp tim cao và thấp <br>Cảnh báo nhịp tim bất thường</p>
+                <p class="thông-số">Kháng nước ở độ sâu 50m</p>
+            </div>
+            <div class="column2-2">
+                <img src="watch-se.PNG", class="image-watch1">
+                <h3 class="tên-spham">Apple Watch SE</h3>
+                <h4 class="giá-tiền">Chỉ từ 12.990.000đ</h4>
+                <p class="thông-số">Vòng 44nm hoặc 40nm</p>
+                <p class="thông-số">---</p>
+                <p class="thông-số">Màn hình Retina</p>
+                <p class="thông-số">GPS + Di động</p>
+                <p class="thông-số">---</p>
+                <p class="thông-số">Thông báo nhịp tim cao và thấp <br>Cảnh báo nhịp tim bất thường</p>
+                <p class="thông-số">Kháng nước ở độ sâu 50m</p>
+            </div>
+            <div class="column2-3">
+                <img src="watch-seri-3.PNG", class="image-watch1">
+                <h3 class="tên-spham">Apple Watch Series 3</h3>
+                <h4 class="giá-tiền">Chỉ từ 10.990.000đ</h4>
+                <p class="thông-số">Vòng 44nm hoặc 40nm</p>
+                <p class="thông-số">---</p>
+                <p class="thông-số">Màn hình Retina</p>
+                <p class="thông-số">GPS</p>
+                <p class="thông-số">---</p>
+                <p class="thông-số">Thông báo nhịp tim cao và thấp <br>Cảnh báo nhịp tim bất thường</p>
+                <p class="thông-số">Kháng nước ở độ sâu 50m</p>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="cuoipage">
+    <div>
+        <p class="ten-btl">BÀI TẬP LỚN MÔN INTERNET</p>
+        <p class="ten-nhom">Nhóm 2: Nguyễn Thành Công- Vũ Việt Anh- Vũ Tiến Anh</p>
+    </div>
+</footer>
+</html>
